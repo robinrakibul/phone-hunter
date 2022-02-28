@@ -1,0 +1,14 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+/* Primary Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 64px;
+}
