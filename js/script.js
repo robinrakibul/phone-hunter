@@ -52,10 +52,25 @@ const displayDetail = slug =>{
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML=`
-        <p class="card-title font-small text-center ms-3 me-3">Brand Name: ${slug.brand}</p>
-        <img src="${slug.image}" class="card-img-top img-fluid mx-auto w-75 m-3" alt="...">
-        <h3 class="ms-3 me-3">Main Features</h3>
-        <p class="card-title font-small text-center ms-3 me-3">Storage ${slug.mainFeatures.storage}</p>
+        <h3 class="card-title font-small text-center ms-3 me-3">Brand Name: ${slug.brand}</h3>
+        <h5 class="card-title font-small text-center ms-3 me-3">Phone Name: ${slug.name}</h5>
+        <small class="ms-3 me-3">Release Date: "${slug.releaseDate}"</small>
+        <img src="${slug.image}" class="card-img-top img-fluid mx-auto w-50 m-3" alt="...">
+        <h4 class="ms-3 me-3 text-center">Main Features</h4>
+        <p class="card-title font-small text-center ms-3 me-3">Storage: ${slug.mainFeatures.storage}</p>
+        <p class="card-title font-small text-center ms-3 me-3">Display Size: ${slug.mainFeatures.displaySize}</p>
+        <p class="card-title font-small text-center ms-3 me-3">Chipset: ${slug.mainFeatures.chipSet}</p>
+        <p class="card-title font-small text-center ms-3 me-3">Memory: ${slug.mainFeatures.memory}</p>
+        <p class="card-title font-small text-center ms-3 me-3">Sensors: ${slug.mainFeatures.sensors}</p>
+
+        <h4 class="ms-3 me-3 text-center">Others</h4>
+
+        <p class="card-title font-small text-center ms-3 me-3">WLAN: ${slug.others.WLAN}</p>
+        <p class="card-title font-small text-center ms-3 me-3">Bluetooth: ${slug.others.Bluetooth}</p>
+        <p class="card-title font-small text-center ms-3 me-3">GPS: ${slug.others.GPS}</p>
+        <p class="card-title font-small text-center ms-3 me-3">NFC: ${slug.others.NFC}</p>
+        <p class="card-title font-small text-center ms-3 me-3">Radio: ${slug.others.Radio}</p>
+        <p class="card-title font-small text-center ms-3 me-3">USB: ${slug.others.USB}</p>
         `
     phoneInfo.appendChild(div);
 }
