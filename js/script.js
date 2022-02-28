@@ -52,8 +52,10 @@ const displayDetail = slug =>{
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML=`
-            <div class="card-body">
-              
-            </div>`;
+        <p class="card-title font-small text-center ms-3 me-3">Brand Name: ${slug.brand}</p>
+        <img src="${slug.image}" class="card-img-top img-fluid mx-auto w-75 m-3" alt="...">
+        <h3 class="ms-3 me-3">Main Features</h3>
+        <p class="card-title font-small text-center ms-3 me-3">Storage ${slug.mainFeatures.storage}</p>
+        `
     phoneInfo.appendChild(div);
 }
