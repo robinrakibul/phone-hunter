@@ -19,11 +19,18 @@
         </a>
         <!-- Search Button -->
         <div class="container-fluid d-flex w-50">
-            <input class="form-control me-2" type="search" placeholder="Enter a mobile name" aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">Search</button>
+            <input class="form-control me-2" id="search-input" type="search" placeholder="Enter a mobile name" aria-label="Search">
+            <button onclick="searchPhoneModel()" class="btn btn-outline-primary" type="submit">Search</button>
         </div>
     </header>
-    
+    <main>
+        <!-- Phone Search Result -->
+        <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+               
+            </div>
+        </div>
+    </main>
     
 <!-- JS -->
 <script src="js/script.js"></script>
