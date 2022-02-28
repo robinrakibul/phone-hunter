@@ -9,5 +9,29 @@ const searchPhoneModel=()=>{
     //fetching data
     fetch(url)
     .then(res=> res.json())
-    .then(data => console.log(data.data))
+    .then((data) => {
+        if (data.status == true) {
+            showResult(data.data);
+        }
+        else {
+          alert('No result found');
+        }
+    })
+}
+
+const showResult = phones => {
+    const searchResult = document.getElementById('search-mobile');
+    searchResult.innerHTML='';
+    phones.forEach(phone=>{
+        const div = document.createElement('div');
+        div.classList.add('col');
+        div.innerHTML=`
+        <div class="container card h-100 w-50 mt-3 mb-3 rounded-3">
+            <p class="card-title font-small">${phone.phone_name}</p>
+            <img src="${phone.image}" class="card-img-top mw-100" alt="...">
+            <div class="card-body">
+            </div>
+        </div>`;
+        searchResult.appendChild(div);
+    })
 }
