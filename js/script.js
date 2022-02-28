@@ -28,9 +28,7 @@ const showResult = phones => {
         div.innerHTML=`
         <div class="container card h-100 w-50 mt-3 mb-3 rounded-3">
             <p class="card-title font-small">${phone.phone_name}</p>
-            <img src="${phone.image}" class="card-img-top mw-100" alt="...">
-            <div class="card-body">
-            </div>
+            <img src="${phone.image}" class="card-img-top mw-100" alt="..." title="${phone.phone_name}">
         </div>`;
         searchResult.appendChild(div);
     })
