@@ -11,7 +11,7 @@ const searchPhoneModel=()=>{
     .then(res=> res.json())
     .then((data) => {
         if (data.status == true) {
-            showResult(data.data.slice(0,20));
+            showResult(data.data.slice(0,20)); //Show maximum of 20 data
         }
         else {
           alert('No result found');
@@ -19,6 +19,7 @@ const searchPhoneModel=()=>{
     })
 }
 
+// create card for each phone with results from API
 const showResult = phones => {
     const searchResult = document.getElementById('search-mobile');
     searchResult.innerHTML='';
