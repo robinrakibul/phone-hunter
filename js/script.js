@@ -9,6 +9,5 @@ const searchPhoneModel=()=>{
     //fetching data
     fetch(url)
     .then(res=> res.json())
-    .then(data => checkCondition(data))
+    .then(data => console.log(data))
 }
-
