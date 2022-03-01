@@ -51,7 +51,7 @@ const displayDetail = slug =>{
     phoneInfo.innerHTML='';
     const div = document.createElement('div');
     const sect = document.createElement('section');
-    div.classList.add('card');
+    div.classList.add('card','container-sm','w-75');
     sect.classList.add('card');
 
     div.innerHTML=`
