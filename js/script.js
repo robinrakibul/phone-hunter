@@ -50,7 +50,10 @@ const displayDetail = slug =>{
     const phoneInfo = document.getElementById('phone-info');
     phoneInfo.innerHTML='';
     const div = document.createElement('div');
+    const sect = document.createElement('section');
     div.classList.add('card');
+    sect.classList.add('card');
+
     div.innerHTML=`
         <h3 class="card-title font-small text-center ms-3 me-3">Brand Name: ${slug.brand}</h3>
         <h5 class="card-title font-small text-center ms-3 me-3">Phone Name: ${slug.name}</h5>
@@ -62,15 +65,27 @@ const displayDetail = slug =>{
         <p class="card-title font-small text-center ms-3 me-3">Chipset: ${slug.mainFeatures.chipSet}</p>
         <p class="card-title font-small text-center ms-3 me-3">Memory: ${slug.mainFeatures.memory}</p>
         <p class="card-title font-small text-center ms-3 me-3">Sensors: ${slug.mainFeatures.sensors ? slug.mainFeatures.sensors: 'Not Available'}</p>
-
+        `
+    // Condition to control if others information available
+    if(slug.others){
+        sect.innerHTML= `
         <h4 class="ms-3 me-3 text-center">Others Information</h4>
-        
         <p class="card-title font-small text-center ms-3 me-3">WLAN: ${slug.others.WLAN ? slug.others.WLAN:'Not Available'}</p>
         <p class="card-title font-small text-center ms-3 me-3">Bluetooth: ${slug.others.Bluetooth ? slug.others.Bluetooth:'Not Available'}</p>
         <p class="card-title font-small text-center ms-3 me-3">GPS: ${slug.others.GPS ? slug.others.GPS:'Not Available'}</p>
         <p class="card-title font-small text-center ms-3 me-3">NFC: ${slug.others.NFC ? slug.others.NFC:'Not Available'}</p>
         <p class="card-title font-small text-center ms-3 me-3">Radio: ${slug.others.Radio ? slug.others.Radio:'Not Available'}</p>
         <p class="card-title font-small text-center ms-3 me-3">USB: ${slug.others.USB ? slug.others.USB: 'Not Available'}</p>
+        `;
+    }
+    else(
+        sect.innerHTML = `
+        <h4 class="ms-3 me-3 text-center">Others Information</h4>
+        <p class="card-title font-small text-center ms-3 me-3">No Information Available</p>
         `
+    )
+    
+    // Append div and section
     phoneInfo.appendChild(div);
+    phoneInfo.appendChild(sect);
 }
