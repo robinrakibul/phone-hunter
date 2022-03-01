@@ -63,8 +63,14 @@ const displayDetail = slug =>{
         <p class="card-title font-small text-center ms-3 me-3">Memory: ${slug.mainFeatures.memory}</p>
         <p class="card-title font-small text-center ms-3 me-3">Sensors: ${slug.mainFeatures.sensors ? slug.mainFeatures.sensors: 'Not Available'}</p>
 
-        <h4 class="ms-3 me-3 text-center">Others</h4>
-        <p class="ms-3 me-3 text-center">${slug.others? slug.others:'No Information Available'}</p>
+        <h4 class="ms-3 me-3 text-center">Others Information</h4>
+        
+        <p class="card-title font-small text-center ms-3 me-3">WLAN: ${slug.others.WLAN ? slug.others.WLAN:'Not Available'}</p>
+        <p class="card-title font-small text-center ms-3 me-3">Bluetooth: ${slug.others.Bluetooth ? slug.others.Bluetooth:'Not Available'}</p>
+        <p class="card-title font-small text-center ms-3 me-3">GPS: ${slug.others.GPS ? slug.others.GPS:'Not Available'}</p>
+        <p class="card-title font-small text-center ms-3 me-3">NFC: ${slug.others.NFC ? slug.others.NFC:'Not Available'}</p>
+        <p class="card-title font-small text-center ms-3 me-3">Radio: ${slug.others.Radio ? slug.others.Radio:'Not Available'}</p>
+        <p class="card-title font-small text-center ms-3 me-3">USB: ${slug.others.USB ? slug.others.USB: 'Not Available'}</p>
         `
     phoneInfo.appendChild(div);
 }
