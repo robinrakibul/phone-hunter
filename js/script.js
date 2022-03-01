@@ -55,33 +55,33 @@ const displayDetail = slug =>{
     sect.classList.add('card');
 
     div.innerHTML=`
-        <h3 class="card-title font-small text-center ms-3 me-3">Brand Name: ${slug.brand}</h3>
-        <h5 class="card-title font-small text-center ms-3 me-3">Phone Name: ${slug.name}</h5>
+        <h3 class="card-title font-small ms-3 mt-2 me-3">Brand Name: ${slug.brand}</h3>
+        <h5 class="card-title font-small ms-3 me-3">Phone Name: ${slug.name}</h5>
         <small class="ms-3 me-3">Release Date: "${slug.releaseDate ? slug.releaseDate:'Information Not Available'}"</small>
         <img src="${slug.image}" class="card-img-top img-fluid mx-auto w-50 m-3" alt="...">
-        <h4 class="ms-3 me-3 text-center">Main Features</h4>
-        <p class="card-title font-small text-center ms-3 me-3">Storage: ${slug.mainFeatures.storage}</p>
-        <p class="card-title font-small text-center ms-3 me-3">Display Size: ${slug.mainFeatures.displaySize}</p>
-        <p class="card-title font-small text-center ms-3 me-3">Chipset: ${slug.mainFeatures.chipSet}</p>
-        <p class="card-title font-small text-center ms-3 me-3">Memory: ${slug.mainFeatures.memory}</p>
-        <p class="card-title font-small text-center ms-3 me-3">Sensors: ${slug.mainFeatures.sensors ? slug.mainFeatures.sensors: 'Not Available'}</p>
+        <h4 class="ms-3 me-3">Main Features</h4>
+        <p class="card-title font-small ms-3 me-3">Storage: ${slug.mainFeatures.storage}</p>
+        <p class="card-title font-small ms-3 me-3">Display Size: ${slug.mainFeatures.displaySize}</p>
+        <p class="card-title font-small ms-3 me-3">Chipset: ${slug.mainFeatures.chipSet}</p>
+        <p class="card-title font-small ms-3 me-3">Memory: ${slug.mainFeatures.memory}</p>
+        <p class="card-title font-small ms-3 me-3">Sensors: ${slug.mainFeatures.sensors ? slug.mainFeatures.sensors: 'Not Available'}</p>
         `
     // Condition to control if others information available
     if(slug.others){
         sect.innerHTML= `
-        <h4 class="ms-3 me-3 text-center">Others Information</h4>
-        <p class="card-title font-small text-center ms-3 me-3">WLAN: ${slug.others.WLAN ? slug.others.WLAN:'Not Available'}</p>
-        <p class="card-title font-small text-center ms-3 me-3">Bluetooth: ${slug.others.Bluetooth ? slug.others.Bluetooth:'Not Available'}</p>
-        <p class="card-title font-small text-center ms-3 me-3">GPS: ${slug.others.GPS ? slug.others.GPS:'Not Available'}</p>
-        <p class="card-title font-small text-center ms-3 me-3">NFC: ${slug.others.NFC ? slug.others.NFC:'Not Available'}</p>
-        <p class="card-title font-small text-center ms-3 me-3">Radio: ${slug.others.Radio ? slug.others.Radio:'Not Available'}</p>
-        <p class="card-title font-small text-center ms-3 me-3">USB: ${slug.others.USB ? slug.others.USB: 'Not Available'}</p>
+        <h4 class="m-2 text-center">Others Information</h4>
+        <p class="card-title font-small ms-3 me-3">WLAN: ${slug.others.WLAN ? slug.others.WLAN:'Not Available'}</p>
+        <p class="card-title font-small ms-3 me-3">Bluetooth: ${slug.others.Bluetooth ? slug.others.Bluetooth:'Not Available'}</p>
+        <p class="card-title font-small ms-3 me-3">GPS: ${slug.others.GPS ? slug.others.GPS:'Not Available'}</p>
+        <p class="card-title font-small ms-3 me-3">NFC: ${slug.others.NFC ? slug.others.NFC:'Not Available'}</p>
+        <p class="card-title font-small ms-3 me-3">Radio: ${slug.others.Radio ? slug.others.Radio:'Not Available'}</p>
+        <p class="card-title font-small ms-3 me-3">USB: ${slug.others.USB ? slug.others.USB: 'Not Available'}</p>
         `;
     }
     else(
         sect.innerHTML = `
         <h4 class="ms-3 me-3 text-center">Others Information</h4>
-        <p class="card-title font-small text-center ms-3 me-3">No Information Available</p>
+        <p class="card-title font-small ms-3 me-3">No Information Available</p>
         `
     )
     
