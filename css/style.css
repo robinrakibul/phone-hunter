@@ -6,11 +6,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .title{
     font-family: 'Bebas Neue', cursive;
     font-size: 64px;
+    cursor: pointer;
 }
 
 body{

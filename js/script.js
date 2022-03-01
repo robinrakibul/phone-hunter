@@ -58,7 +58,7 @@ const displayDetail = slug =>{
         <h3 class="card-title font-small ms-3 mt-2 me-3">Brand Name: ${slug.brand}</h3>
         <h5 class="card-title font-small ms-3 me-3">Phone Name: ${slug.name}</h5>
         <small class="ms-3 me-3">Release Date: "${slug.releaseDate ? slug.releaseDate:'Information Not Available'}"</small>
-        <img src="${slug.image}" class="card-img-top img-fluid mx-auto w-50 m-3" alt="...">
+        <img src="${slug.image}" class="card-img-top img-fluid mx-auto w-25 m-3" alt="...">
         <h4 class="ms-3 me-3">Main Features</h4>
         <p class="card-title font-small ms-3 me-3">Storage: ${slug.mainFeatures.storage}</p>
         <p class="card-title font-small ms-3 me-3">Display Size: ${slug.mainFeatures.displaySize}</p>
